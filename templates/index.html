@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ team }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <header>{{ team }}</header>
+        <hr />
+        <div class="container">
+            <div id="channels">
+                {% for channel in channels %}
+                <button class="channel" id="{{ channel.id }}">{{ channel.name }}</button>
+                {% endfor %}
+            </div>
+            <div id="messages">ようこそ!</div>
+        </div>
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+    </body>
+</html>
