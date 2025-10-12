@@ -1,5 +1,5 @@
 body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0px;
 }
 
@@ -33,11 +33,17 @@ button.channel {
     background-color: transparent;
     text-align: left;
     padding: 5px;
+    cursor: pointer;
+}
+
+button.channel:hover {
+    background-color: #eeeeee;
+    color: #000000;
 }
 
 button.active {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 #messages {
